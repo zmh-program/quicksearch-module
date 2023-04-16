@@ -9,7 +9,7 @@ def parse(text: str) -> None:
     try:
         pre, *child = text.split(".")
         value_list = eval(".".join([pre, *child[:-1]]), globals(), {
-            pre: globals()[pre] if pre in globals() else import_module(pre),
+            pre: eval(pre) if pre in dir(__builtins__) else import_module(pre),
         })
         target = child[0].lower() if child else ""
         res: List[str] = [element for element in dir(value_list) if element.lower().startswith(target)]
@@ -28,5 +28,6 @@ if __name__ == "__main__":
     while True:
         content = input("Search> ").strip()
         if content.lower() in ("q", "quit", "exit"):
+            print("Quit.")
             break
         parse(content)
