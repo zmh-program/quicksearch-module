@@ -1,13 +1,18 @@
-# quicksearch-module
-🔍 Python 模块/全局变量的方法模糊搜索 (在微机课没事干做的算不上小东西的小东西)
+<div align="center">
 
-### 特性
-- √ Python 3.1+ (兼容性好)
-- √ 无第三方库依赖 (适合无网环境)
-- √ 模糊搜索 
+# quicksearch-module
+#### 🔍 Python 模块/全局变量的方法模糊搜索
+#### 🔍 Python fuzzy search for module/global variables
+
+</div>
+
+### 特性 | Features
+- ✔ Python 3.1+ (兼容性好)
+- ✔ 无第三方库依赖 (适合无网环境)
+- ✔ 模糊搜索 是
   (编不下去了)
 
-### 用法
+### 用法 | Usage
 ```commandline
 Search> Exception.__
 __cause__           
@@ -93,5 +98,8 @@ AddressFamily 	AddressInfo
 Search> q
 Quit.
 ```
-### License
+### 开源协议 | License
 MIT
+
+### 关于
+在微机课没事干做的小东西, 方便轻量、快速搜索记不清的API
